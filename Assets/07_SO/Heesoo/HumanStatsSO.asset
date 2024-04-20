@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc470c3b4824e49998cbeb46fa8139, type: 3}
+  m_Name: HumanStatsSO
+  m_EditorClassIdentifier: 
+  HumanStatList:
+  - level: 0
+    hp: 0
+    attack: 0
+    moveSpeed: 0
+    skinColor: {r: 0, g: 0, b: 0, a: 0}
+    bodyScale: {x: 0, y: 0, z: 0}
+  - level: 1
+    hp: 10
+    attack: 1
+    moveSpeed: 60
+    skinColor: {r: 0.2688679, g: 0.34374267, b: 1, a: 0}
+    bodyScale: {x: 0.6, y: 0.6, z: 0.6}
+  - level: 2
+    hp: 15
+    attack: 3
+    moveSpeed: 60
+    skinColor: {r: 1, g: 0.4666083, b: 0.19339621, a: 0}
+    bodyScale: {x: 0.7, y: 0.7, z: 0.7}
+  - level: 3
+    hp: 20
+    attack: 5
+    moveSpeed: 60
+    skinColor: {r: 0.19215685, g: 1, b: 0.87598217, a: 0}
+    bodyScale: {x: 0.8, y: 0.8, z: 0.8}
+  - level: 4
+    hp: 30
+    attack: 8
+    moveSpeed: 60
+    skinColor: {r: 0.9493896, g: 1, b: 0.19339621, a: 0}
+    bodyScale: {x: 0.9, y: 0.9, z: 0.9}
+  - level: 5
+    hp: 40
+    attack: 13
+    moveSpeed: 60
+    skinColor: {r: 0, g: 0.7735849, b: 0.20822792, a: 0}
+    bodyScale: {x: 1, y: 1, z: 1}
+  - level: 6
+    hp: 50
+    attack: 21
+    moveSpeed: 60
+    skinColor: {r: 0.6732583, g: 0.21226418, b: 1, a: 0}
+    bodyScale: {x: 1.1, y: 1.1, z: 1.1}
+  - level: 7
+    hp: 60
+    attack: 34
+    moveSpeed: 60
+    skinColor: {r: 0.9399972, g: 0.20425421, b: 0.9622642, a: 0}
+    bodyScale: {x: 1.2, y: 1.2, z: 1.2}
+  - level: 8
+    hp: 70
+    attack: 50
+    moveSpeed: 60
+    skinColor: {r: 0.7264151, g: 0.22717714, b: 0.099368125, a: 0}
+    bodyScale: {x: 1.3, y: 1.3, z: 1.3}
+  - level: 9
+    hp: 80
+    attack: 100
+    moveSpeed: 60
+    skinColor: {r: 0.6981132, g: 0.6487184, b: 0.6487184, a: 0}
+    bodyScale: {x: 1.5, y: 1.5, z: 1.5}
+  - level: 10
+    hp: 100
+    attack: 70
+    moveSpeed: 60
+    skinColor: {r: 0, g: 0, b: 0, a: 0}
+    bodyScale: {x: 1.4, y: 1.4, z: 1.4}
