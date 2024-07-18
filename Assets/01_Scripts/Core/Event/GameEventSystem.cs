@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using System;
 
@@ -24,7 +25,7 @@ public class GameEventSystem : MonoSingleton<GameEventSystem>
             eventDictionary.Add(eventType, listener);
         }
 
-        WriteLog(sender, EventState.Subscribe, eventType);
+        WriteLog(sender, listener.GetMethodInfo().Name, EventState.Unsubscribe, eventType);
     }
     
     // 이벤트 구독 취소
@@ -37,12 +38,12 @@ public class GameEventSystem : MonoSingleton<GameEventSystem>
             thisEvent -= listener;
             eventDictionary[eventType] = thisEvent;
 
-            WriteLog(sender, EventState.Unsubscribe, eventType);
+            WriteLog(sender, listener.GetMethodInfo().Name, EventState.Unsubscribe, eventType);
         }
     }
 
-    // 이벤트 발생
-    public void PublishEvent(object sender, GameEventType eventType)
+    // 이벤트 발행
+    public void PublishEvent(object sender, string where, GameEventType eventType)
     {
         Action thisEvent;
 
@@ -50,14 +51,15 @@ public class GameEventSystem : MonoSingleton<GameEventSystem>
         {
             thisEvent?.Invoke();
 
-            WriteLog(sender, EventState.Publish, eventType);
+            WriteLog(sender, where, EventState.Publish, eventType);
         }
     }
 
-    // 로그 작성 (어디서 보내주는 것이고, 어떤 행동을 할 것이며, 어느 상태에 그 행동을 할 것인지)
-    private void WriteLog(object sender, EventState eventState, GameEventType eventType)
+    // 로그 생성
+    private void WriteLog(object sender, string eventMeshodName, EventState eventState, GameEventType eventType)
     {
-        var log = new EventSubscribeLog(sender, eventState, eventType);
+        var log = new EventSubscribeLog(sender, eventMeshodName, eventState, eventType);
         eventSubscribeLogs.Add(log);
     }
+
 }
