@@ -11,13 +11,15 @@ public enum EventState
 public struct EventSubscribeLog
 {
     public string Sender;
+    public string EventMethodName;
     public string EventType;
     public string State;
     public string Time;
     
-    public EventSubscribeLog(object sender, EventState eventState, GameEventType eventType)
+    public EventSubscribeLog(object sender, string eventMethodName, EventState eventState, GameEventType eventType)
     {
         Sender = sender.GetType().Name;
+        EventMethodName = eventMethodName; 
         EventType = eventType.ToString();
         State = eventState.ToString();
         Time = DateTime.Now.ToString(("HH:mm:ss"));
